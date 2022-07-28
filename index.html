@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+    <h1>Hello!!!</h1>
+    <h2>An axios.get function has already run. Please open the Console to check results</h2>
+    <h2>The axios request:</h2>
+    <p>let results = axios.get('https://jsonplaceholder.typicode.com/todos', { <br>
+        params: {//the key and value pairs of the query parameter <br>
+        userId: 1, <br>
+        completed: false <br>
+        }
+        }) <br>
+        console.log("results are:"); <br>
+        console.log(results); <br>
+    </p>
+    <h1>Press the button below to see the titles of another axios.get function:</h1>
+    <button id="axios3Button">Axios GET with Then</button>
+    <h2>The axios.get function</h2>
+    <p> axios.all([
+        axios.get("https://jsonplaceholder.typicode.com/todos/"),//the first get request <br>
+        axios.get("https://jsonplaceholder.typicode.com/users")//the second get request
+        ])<br>
+        .then(axios.spread((todos, users) => {//the two request arrays as parameters <br>
+        console.log("todos are:"); <br>
+        console.log(todos)//the first request array <br>
+        console.log("users are:"); <br>
+        console.log(users)//the second request array <br>
+        console.log("todos.data are:"); <br>
+        console.log(todos.data) <br>
+        console.log("todos.data one by one:"); <br>
+        let theData = todos.data <br>
+        display(theData);
+        })) <br>
+    </p>
+    <h2>The Results:</h2>
+    <div id="displayDiv">
+
+    </div>
+    <h1>Let's POST a change:</h1>
+    <button id="myPostButton">Axios POST</button>
+
+    <script src="src/js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
