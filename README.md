@@ -14,8 +14,12 @@ If you used script.js instead of main.js, just make the following change:
 
 
 To check that the server is running and to build your project.. Go to the console or a Power Shell, cd to the project folder and run the following commands:
-![it worked3](https://user-images.githubusercontent.com/53035581/181639946-b47dd6da-bed5-47e7-a0d4-a145b72e45a1.png)
+
+![change2](https://user-images.githubusercontent.com/53035581/181642203-5d4c6ec5-7f41-426f-808b-e31460112f29.png)
 
 Copy the location of the running project such as "localhost:1234" and paste it in your browser.
 
 You should now be set up for success!
+
+![change3](https://user-images.githubusercontent.com/53035581/181642530-920ec704-b82e-4568-b7e8-33556547fdb1.png)
+
