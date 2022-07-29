@@ -10,9 +10,14 @@
 </head>
 
 <body>
-    <h1>Hello!!!</h1>
-    <h2>An axios.get function has already run. Please open the Console to check results</h2>
-    <h2>The axios request:</h2>
+    <h1>Hello!!! Axios and get/post/.. requests:</h1>
+
+    <h1>First Fetch Function</h1>
+    <h2>Please open console window to see result</h2>
+    <p>let result = fetch('https://jsonplaceholder.typicode.com/todos'); <br>
+        console.log(result); <br></p>
+
+    <h1>First GET function</h1>
     <p>let results = axios.get('https://jsonplaceholder.typicode.com/todos', { <br>
         params: {//the key and value pairs of the query parameter <br>
         userId: 1, <br>
@@ -22,7 +27,16 @@
         console.log("results are:"); <br>
         console.log(results); <br>
     </p>
-    <h1>Press the button below to see the titles of another axios.get function:</h1>
+
+    <h1>Second GET function</h1>
+    <p>let result3 = axios.get('https://jsonplaceholder.typicode.com/todos?userId=1&completed=false') <br>
+        console.log("Our second GET function:"); <br>
+        console.log(result3); <br>
+    </p>
+
+    <h1>Third GET function</h1>
+    <h2>When the button is pressed you will see the id, title and status of each task</h2>
+
     <button id="axios3Button">Axios GET with Then</button>
     <h2>The axios.get function</h2>
     <p> axios.all([
@@ -45,8 +59,37 @@
     <div id="displayDiv">
 
     </div>
-    <h1>Let's POST a change:</h1>
-    <button id="myPostButton">Axios POST</button>
+
+    <h1>Our First POST request</h1>
+    <div id="new-todos">
+        <h2>New Todo</h2>
+        <form>
+            <label>
+                Name
+                <input type="text" id="new-todos__title" />
+            </label>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div>
+        <h1>Todos</h1>
+        <ul>
+
+        </ul>
+    </div>
+
+    <h1>Our Second Post Request with the url only</h1>
+    <div id="new-todos2">
+        <h2>New Todo</h2>
+        <form id="form2">
+            <label>
+                Name
+                <input type="text" id="new-todos__title2" />
+            </label>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <h3>Success output is in console</h3>
 
     <script src="src/js/script.js" type="text/javascript"></script>
 </body>
